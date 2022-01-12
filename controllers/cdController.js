@@ -8,11 +8,9 @@ const Cd = db.Cds;
 
 const addCd = async (req, res) => {
   let input_data = {
-    initialBalance: req.body.initialBalance,
-    currentBalance: req.body.currentBalance,
-    remainingTerm: req.body.remainingTerm,
+    minimumOpeningDeposit: req.body.minimumOpeningDeposit,
+    term: req.body.term,
     interestRate: req.body.interestRate,
-    liquid: req.body.liquid
   };
   // using the builtin 'create' function on Customer Model
   const cd = await Cd.create(input_data);

@@ -14,6 +14,9 @@ const routers = require('./routes/cdRouter.js')
 
 app.use('/cds', routers)
 
+const elcdrouter = require('./routes/elCdRouter');
+app.use('/elcds', elcdrouter);
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
