@@ -45,7 +45,7 @@ const updateElcd = async (req, res) => {
 
     // using the builtin 'findAll' function on Bag Model
     const elcd = await Elcd.update(req.body, { where: {id: id}})
-    res.status(200).send(bag)
+    res.status(200).send(elcd)
 }
 
 const deleteElcd = async (req, res) => {

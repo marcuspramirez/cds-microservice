@@ -47,7 +47,7 @@ db.sequelize
     console.log("Error syncing the DB to sequelize" + error);
   });
 
- db.Elcds.hasMany(db.Cds);
+ 
  db.Cds.belongsTo(db.Elcds);
 
 module.exports = db;
