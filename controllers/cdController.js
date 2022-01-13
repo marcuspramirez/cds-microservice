@@ -23,7 +23,7 @@ const addCd = async (req, res) => {
 const getAllCds = async (req, res) => {
   // using the builtin 'findOne' function on Customer Model
   let cds = await Cd.findAll({
-    include: db.Elcd
+    include: db.Elcds
   });
   res.status(200).send(cds);
 };
