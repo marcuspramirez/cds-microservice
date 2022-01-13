@@ -11,6 +11,7 @@ const addCd = async (req, res) => {
     minimumOpeningDeposit: req.body.minimumOpeningDeposit,
     term: req.body.term,
     interestRate: req.body.interestRate,
+    elcdId: req.body.elcdId
   };
   // using the builtin 'create' function on Customer Model
   const cd = await Cd.create(input_data);
@@ -21,7 +22,9 @@ const addCd = async (req, res) => {
 
 const getAllCds = async (req, res) => {
   // using the builtin 'findOne' function on Customer Model
-  let cds = await Cd.findAll({});
+  let cds = await Cd.findAll({
+    include: db.Elcd
+  });
   res.status(200).send(cds);
 };
 
@@ -30,7 +33,7 @@ const getOneCd = async (req, res) => {
   let id = req.params.id;
 
   // using the builtin 'findOne' function on Customer Model
-  let cds = await Cd.findOne({ where: { id: id } });
+  let cds = await Cd.findOne({ where: { id: id }, include: db.Elcds});
   res.status(200).send(cds);
 };
 
