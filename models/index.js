@@ -25,6 +25,12 @@ let sequelize = null;
             username: dbConfig.USER,
             password: dbConfig.PASSWORD,
             dialect: dbConfig.dialect,
+            dialectOptions: {
+              ssl: {
+                 require: true,
+                 rejectUnauthorized: false
+           }
+           },
             host: dbConfig.HOST,
         })
     }
