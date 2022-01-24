@@ -25,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DOUBLE,
       allowNull: false,
     },
+    isEquityLinked: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     elcdId: {
       // a cd can belong to a elcd
       type: DataTypes.INTEGER,
