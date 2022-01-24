@@ -11,8 +11,7 @@ const addCd = async (req, res) => {
     minimumOpeningDeposit: req.body.minimumOpeningDeposit,
     term: req.body.term,
     interestRate: req.body.interestRate,
-    elcdId: req.body.elcdId,
-    isEquityLinked: req.body.isEquityLinked
+    elcdId: req.body.elcdId
   };
   // using the builtin 'create' function on Customer Model
   const cd = await Cd.create(input_data);
