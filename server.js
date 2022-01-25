@@ -18,7 +18,7 @@ const elcdrouter = require("./routes/elCdRouter");
 app.use("/elcds", elcdrouter);
 
 app.get("/", (req, res) => {
-  res.send("Welcome Talent Path");
+  res.send("Welcome to the Cds API");
 });
 
 

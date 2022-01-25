@@ -25,9 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DOUBLE,
       allowNull: false,
     },
-    elcdId: {
+    elcdName: {
       // a cd can belong to a elcd
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
     },
   });
